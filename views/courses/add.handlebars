@@ -1,0 +1,26 @@
+<div style="padding-bottom: 5%"></div>
+<h4>Add Course</h4>
+<form action="/" method="POST" enctype="multipart/form-data">
+    <div class="input-field">
+        <input type="text" id="cName" name="course_name" placeholder="NodeJs Dev To Deployment">
+        <label for="cName">Course Name</label>
+    </div>
+    <div class="input-field">
+        <input type="text" id="turl" name="torrentUrl" placeholder="torrent Url">
+        <label for="turl">Torrent Url</label>
+    </div>
+    <div class="input-field">
+        <input type="text" id="timg" name="courseImage" placeholder="Paste Image Url">
+        <label for="timg">Course Image</label>
+    </div>
+    <div class="file-field input-field">
+        <div class="btn">
+            <span>File</span>
+            <input type="file" name="torrentFile">
+        </div>
+        <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+        </div>
+    </div>
+    <button class="btn">Save Course</button>
+</form>

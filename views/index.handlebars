@@ -1,0 +1,51 @@
+<h5 class="white-text center-align">{{text}}</h5>
+<div class="row">
+
+    {{#each courses}}
+    {{#if status}}
+    <div class="col s12 card green ">
+        <div class="card-content">
+            <h4 class="card-title center">{{course_name}}</h4>
+            <img src="{{courseImage}}" height="100px" height="100px" alt="">
+            <p class="green right">Downloaded</p>
+            <div class="card-action">
+                <a href="{{torrentUrl}}" class="btn lime black-text right mgbtn ">Url</a>
+                <form action="/openWithU/{{id}}?_method=PUT" method="post">
+                    <input type="hidden">
+                    <button style="margin-bottom: 40px" class="btn light-green lighten-1 right">Magnet URL</button>
+                </form>
+                <form action="/delete/{{id}}?_method=DELETE" method="POST">
+                    <input type="hidden">
+                    <input type="submit" class="btn red" value="Delete">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{else}}
+    <div class="col s12 card grey">
+        <div class="card-content">
+            <h4 class="card-title center">{{course_name}}</h4>
+            <img src="{{courseImage}}" height="100px" height="100px" alt="">
+            <p class="grey red-text right">Not Downloaded</p>
+            <div class="card-action">
+                <a href="{{torrentUrl}}" class="btn lime black-text right mgbtn ">Url</a>
+                <form action="/openWithU/{{id}}?_method=PUT" method="post">
+                    <input type="hidden">
+                    <button style="margin-bottom: 40px" class="btn light-green lighten-1 right">Magnet URL</button>
+                </form>
+                <form action="/delete/{{id}}?_method=DELETE" method="POST">
+                    <input type="hidden">
+                    <input type="submit" class="btn red" value="Delete">
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    {{else}}
+    <p class="white-text">No course listed</p>
+
+    {{/each}}
+
+
+</div>

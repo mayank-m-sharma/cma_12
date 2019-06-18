@@ -1,0 +1,26 @@
+.submitAsLink{
+    background:none;
+    color:white;
+    border:none; 
+    padding:0!important;
+    font: inherit;
+    /*border is optional*/
+    text-align: center;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    margin: 8%;
+}
+
+body{
+    background-color: #333; 
+}
+
+
+
+
+@media(min-width: 786px){
+    .mgbtn{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+}

@@ -1,0 +1,30 @@
+<nav class=" blue accent-4">
+    <div class="nav-wrapper">
+        <div class="container">
+            <a href="/" class="brand-logo">Home</a>
+            <a href="#!" class="button-collapse" data-activates="mob">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-small-and-down">
+                <li><a href="/course/add">Add Course</a></li>
+                <li><a href="/courses">View all Course</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Filter Result<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul id='dropdown1' class='dropdown-content blue white-text'>
+                <form action="/filterByDownloaded" method="post">
+                    <input type="hidden">
+                    <input type="submit" class="submitAsLink" value="Downloaded">
+                </form>
+                <form action="/filterByNotDownloaded" method="post">
+                    <input type="hidden">
+                    <input type="submit" class="submitAsLink" value="Not downloaded">
+                </form>
+            </ul>
+        </div>
+    </div>
+    <ul class="side-nav" id="mob">
+        <li><a href="/course/add">Add Course</a></li>
+        <li><a href="/courses">View all Course</a></li>
+    </ul>
+</nav>
